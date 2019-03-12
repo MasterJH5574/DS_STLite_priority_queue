@@ -1,0 +1,4 @@
+"D:\CLion 2018.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\lairu\Documents\GitHub\DS1_STLite\priority_queue
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/lairu/Documents/GitHub/DS1_STLite/priority_queue/cmake-build-debug

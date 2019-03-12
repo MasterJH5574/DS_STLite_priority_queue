@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/lairu/Documents/GitHub/DS1_STLite/priority_queue/code.cpp
+iostream
+-
+queue
+-
+ctime
+-
+cstdlib
+-
+priority_queue.hpp
+C:/Users/lairu/Documents/GitHub/DS1_STLite/priority_queue/priority_queue.hpp
+
+C:/Users/lairu/Documents/GitHub/DS1_STLite/priority_queue/exceptions.hpp
+cstddef
+-
+cstring
+-
+string
+-
+
+C:/Users/lairu/Documents/GitHub/DS1_STLite/priority_queue/priority_queue.hpp
+cstddef
+-
+functional
+-
+exceptions.hpp
+C:/Users/lairu/Documents/GitHub/DS1_STLite/priority_queue/exceptions.hpp
+
