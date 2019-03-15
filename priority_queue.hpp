@@ -50,6 +50,7 @@ private:
             return;
         deconstruct(o->ls);
         deconstruct(o->rs);
+        delete o->data;
         delete o;
     }
 
@@ -120,6 +121,7 @@ public:
             throw container_is_empty();
         node *l = root->ls;
         node *r = root->rs;
+        delete root->data;
         delete root;
 
         root = merge_heap(l, r);
