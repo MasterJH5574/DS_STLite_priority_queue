@@ -79,44 +79,44 @@ private:
     }
 
 public:
-	priority_queue() {
-	    root = nullptr;
-	    size1 = 0;
-	}
+    priority_queue() {
+        root = nullptr;
+        size1 = 0;
+    }
 
-	priority_queue(const priority_queue &o) {
-	    root = copy_construct(o.root);
-	    size1 = o.size1;
-	}
+    priority_queue(const priority_queue &o) {
+        root = copy_construct(o.root);
+        size1 = o.size1;
+    }
 
-	~priority_queue() {
-	    deconstruct(root);
-	}
+    ~priority_queue() {
+        deconstruct(root);
+    }
 
-	priority_queue &operator=(const priority_queue &o) {
+    priority_queue &operator=(const priority_queue &o) {
         if (this == &o)
             return *this;
         deconstruct(root);
         root = copy_construct(o.root);
         size1 = o.size1;
         return *this;
-	}
+    }
 
-	// throw container_is_empty if empty() returns true;
-	const T& top() const {
-	    if (empty())
+    // throw container_is_empty if empty() returns true;
+    const T& top() const {
+        if (empty())
             throw container_is_empty();
-	    return *root->data;
-	}
+        return *root->data;
+    }
 
-	void push(const T &x) {
+    void push(const T &x) {
         node *p = new node(x, 0);
         root = merge_heap(root, p);
         size1++;
-	}
+    }
 
-	// throw container_is_empty if empty() returns true;
-	void pop() {
+    // throw container_is_empty if empty() returns true;
+    void pop() {
         if (empty())
             throw container_is_empty();
         node *l = root->ls;
@@ -126,23 +126,23 @@ public:
 
         root = merge_heap(l, r);
         size1--;
-	}
+    }
 
-	size_t size() const {
+    size_t size() const {
         return size1;
-	}
+    }
 
-	bool empty() const {
+    bool empty() const {
         return size1 == 0;
-	}
+    }
 
-	void merge(priority_queue &o) {
-	    //priority_queue o = O;
-	    root = merge_heap(root, o.root);
-	    size1 += o.size1;
-	    o.size1 = 0;
-	    o.root = nullptr;
-	}
+    void merge(priority_queue &o) {
+        //priority_queue o = O;
+        root = merge_heap(root, o.root);
+        size1 += o.size1;
+        o.size1 = 0;
+        o.root = nullptr;
+    }
 };
 
 }
